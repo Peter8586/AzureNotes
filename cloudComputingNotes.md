@@ -1,0 +1,150 @@
+Public cloud - everything built on the cloud provider aks known as: cloud native 
+
+Private cloud - everything build on companues datacenters known as On-premises the cloud coulf be openstakc 
+
+Hybrid _ using both on premises and cloud service provider 
+
+Cross - Cloud - using multiple cloude provider aka multi-cloud, hybrid-cloud
+
+Total cost of ownership TCO 
+
+On-premise 
+Software license fees 
+Implementation 
+configs 
+physical hardware 
+IT personel 
+maintenance 
+
+Azure 
+Subscription fees 
+implementation 
+configs 
+training 
+
+
+Capex vs Opex 
+
+Capital Expenditure CAPEX 
+Spending money upfront on physical infrastucure 
+Server costs 
+storage costs 
+network costs 
+backup and archive costs 
+datacenter recovery 
+tech personel 
+
+Operation Expenditure OPEX 
+Leasing software and costimizing features 
+training employees in cloud service 
+paying for cloud support 
+billing based on cloud metrics 
+computer usage 
+storage usage 
+
+
+cloud architecture terminologies 
+Architect a tech org that architects a technical solution usinf multiple systems 
+
+cloud architect 
+focused  solely on architecting technical soltuions using cloud services.
+
+a cloud architect needs to understand the following terms 
+
+1. availability - ensure a service reamins available. 
+2. Scalability - grow rapidly or unimpeded 
+3. Elasticity - shrink and grot to meet the demand 
+4. Fault tolerance - prevent failure 
+5. Disaster - recover from a failure. 
+
+always needs to consider 
+
+1. security 
+2. cost 
+
+
+High Availability -  remain avaialable: no single point of failure 
+running your work across multiple AZ ensure that if 1 or 2 Azs become unavailable your service/applications remain available. 
+ 
+How would you distribute traffic? Azure load Balancer: A load balancer allows you to evenly distribute traffic to multiple servers in one or datacenter. if a datacetner or server is down, the load balancer will route the traffic to only available datacenters with servers. 
+
+High Scalability: increase your capacity based on the increasing demand to traffic, memory and computing power. 
+
+Vertical Scaling: Scaling up -> upgrade to a bigger server 
+Horizontal Scaling : Scaling Out -> Add more servers of the same size 
+
+Azure VM Scalet set: Automatically increase or descrease in response to demand or a defined schedule. 
+
+High Elasticity - automaticallty increase or decrease your capacity based on the current demand of traffic, memory and computing power 
+
+Horizontal scaling: scaling out adding more servers - scaling in - removing servers of the same size. 
+
+SQL Server Stretch Database- dynamically strech warm and cold trasactional data from MS SQL server 2016  to MS Azure 
+ 
+Fault Tolerance: No single point of failure: preventing the chance of failute: 
+Fail-overs: plan to shift traffic to a redundant system in case primary system fails. 
+
+primary database fails X -> failover to -> Sync to  secondary
+
+secondary is on standby and only use if primary fails 
+
+
+What to use in Azure to build out high fault tolerance system: 
+Azure Traffic manager: DNS-based traffic balancer to fail-over from failing primary systems to a stanf-by secondary system.
+
+
+High Durability: recover from disaster and prevent of loss of data. DISASTER RECOVERY (DR)
+1. Do ou have a backup? 
+2. How fast can you resotre that backup?
+3. does your backup still work?
+4. how do you ensure current live data is not corrupt?
+
+BCP Business Continuity Plan (BCP)
+
+BCP document that outlines how business will continue operating - during an unplanned disruption in services. 
+the maximum acceptable amount of data loss after an unplanned data-loss incident , expressed as an amout of time. 
+how much data are you willing to lose?
+
+RPO Recovery Point - defines lenght of duration 
+RTO Recovery time objective - maximum amount of downtime your business can tolerate without imcurring a sugnificant financil loss. 
+
+Disaster recovery options:
+
+Low 
+Cold 
+Backup & Restore - backup your data restore to new infrastructure  (HOURS) 
+Pilot light - data is replicated to another region with the minimal services running (10Min)  
+Warm Standby - scaled down copy of your infrastructure running ready to scale up (Minutes) 
+High 
+Hot 
+ Multi-site active - Scaled up copy of your infra. in another region. Real Time 
+
+
+Dedicated Servers: A physical server wholly utilized by a single customer. 
+you havw to guess your capacity and you'll overpay for underutilizing server. limited OS
+Multiple apps can result in conflicts in resource sharing. 
+but you have a guarantee of security,privacy and full utility of underlying resources. 
+
+VM - Virtual Machines - Multiple VM on one machine. 
+Hypervisor is the software layer that lets you the VMS. 
+Physical seerver shared by multiple customers 
+you pay for a fraction of the server 
+youll over pay for underutilized VM 
+you are limited by your guest operating system.
+multiple apps on a single VM can result in conflic in resource sharing
+
+Containers - Virtula mchine running in multple containers 
+Docker Deamon - software layer that let your run multiple containers 
+you can max the ultilize the available capacity which is more cost-effective
+your container share the same underlying is so containers are more effeicient thant multiple VMs 
+multiple apps run side by side without being limited to the same OS requirements and will not cause conflics during resources sharing. 
+
+Functions - a managed Vms running managed containers. known as Serverless Compute. 
+upload a piece of code choose the amount of memory and duration. 
+only responsible for code and data, nothing else. 
+very cost effective, only pay for the time code is running, VMs only run when there is code to be executes. 
+cold starts is a side-effect to this setup.
+
+
+
+
