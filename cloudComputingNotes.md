@@ -1,3 +1,7 @@
+
+
+
+
 Public cloud - everything built on the cloud provider aks known as: cloud native 
 
 Private cloud - everything build on companues datacenters known as On-premises the cloud coulf be openstakc 
@@ -146,5 +150,71 @@ very cost effective, only pay for the time code is running, VMs only run when th
 cold starts is a side-effect to this setup.
 
 
+Regions and geographies - 
+
+a region is a grouping of multiple datacenters AZ Availability Zones 
+Azrue has 58 regions accrosss 140 countries 
+
+a geo is a discreet market of tow or more regions that preserves data residency and compliance boundaries 
+
+Paired regions: 
+each region is paired with another region 300 miles away 
+
+only one region is updates at a time to ensure no outages 
+
+ Some azure services rely on paired regions for Disaster recovery 
+
+Azure geo-redundant storage replicares dsata to a secondary region automatically, ensuring that data is durable even in the event that the primary region isnt recoverable. 
+
+Types and services - 
+
+(not all azure cloud services are available in every region) 
+
+recommended region - majority of services will be available - designed to support availability zone. 
+
+alternate region - not design to support availbility zone 
+
+general availabilty - ready to be use by everyone GA - 
+
+Azure cloud services grouped into threee categories 
+1. foundational - available immediately or in 12 months in recommended and alternate regions 
+2. mainstream - when GA immediatley or in 12 month recommended region -  alternate region avaible on customer demand 
+3. available in recommended or alternate region based on customer demand 
+
+Special regions - to meet compliance or legal reasons 
+1. US DoD Central 
+2. US Gov Virgina 
+3. US Gov Iowa 
+
+three azure government secret locations undisclosed. 
+
+China East - North 
+
+Availabilty Zones: a datacenter secred building that contains hundreds of thousands of computers 
+
+a region will generally contain 3 AZ - isolate from each otheer but will provide low latency - common practice to run workloads in atleast 3 AZs to ensure remain av. in case 1 or 2 fail. 
+
+Az support regions - not every region has support AZ 
+
+recommended regions are suppose to have atleast 3 Azs 
+
+the following have 3 AZs 
+1. Central US 
+2. East US 2 
+3. West US 2 
+4. West Europe 
+5. France Central 
+6. North Europe 
+7. South Asia 
+
+Fault and Update Domains 
+Fault domain - a group of virtual machines that share a common power source or netwrok switch 
+
+Update domain - azure may need to apply updates to the underlying hardware and software - update domain ensures your resources do no go offline
+
+Av. Set 
+group you can use in azure to ensure that the VMs you place in the av, set are different fault/update domains to avoid downtime. 
+
+fault domains - each virtual machine in an av. set is assigned a fault domain and update domain
 
 
