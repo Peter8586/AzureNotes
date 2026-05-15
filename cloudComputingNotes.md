@@ -1,4 +1,24 @@
+Azure Active directory - 
 
+creating a user account - Must create a group
+
+Enabling MFA -
+
+
+Azure computing services - 
+Azure VM runs windows ore linux  - most common type of compute you choose your os, memory, cpu, storage. 
+
+azure containers instances - docker as a service 
+
+azure kubernetes service - easy to deploy manage and scale containerized apps 
+
+azure service fabric - tier 1 enterprise container as a service. distribute systems platforms - run azure as on premises 
+
+azure functions 0 event driver serverless compute 
+
+azure batch 0 plan schedule and execute your batch computer workloads across running 100 hoba in parallel use spot vms to save money 
+
+Azure VMs - is ahighly configurable server -  
 
 
 
