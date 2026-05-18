@@ -1,3 +1,6 @@
+
+
+
 Azure Active directory - 
 
 creating a user account - Must create a group
